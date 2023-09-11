@@ -37,10 +37,11 @@ html {
 }
 
 body {
-  background-image: url(../../images/bg.jpg);
-  background-position: center;
+  background-image: url(../../images/bg2.jpg);
+  background-position: bottom;
   background-size: cover;
   min-height: 100vh;
+  backdrop-filter: blur(3px);
 }
 
 .big-title {
@@ -79,6 +80,6 @@ body {
   background-color: var(--white-color);
 }
 
-.details {
+/* .details {
   @apply border rounded-lg normal-title text--black py-2 px-4 flex justify-between items-center bg--gray mt-2;
-}
+} */

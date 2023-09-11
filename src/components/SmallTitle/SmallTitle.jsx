@@ -1,5 +1,9 @@
+import useMyStore from "../../store/store";
+
 const SmallTitle = () => {
-  return <p className="small-title text--black text-center">Small title</p>;
+  const { data } = useMyStore();
+
+  return <p className="small-title text--black text-center">{data.name}</p>;
 };
 
 export default SmallTitle;

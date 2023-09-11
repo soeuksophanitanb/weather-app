@@ -1,5 +1,4 @@
 import Container from "../Container/Container";
-import Details from "../Details/Details";
 import Header from "../Header/Header";
 import InfoToday from "../InfoToday/InfoToday";
 import ListDays from "../ListDays/ListDays";
@@ -12,7 +11,6 @@ const Weather = () => {
       <Wrapper>
         <SmallTitle />
         <InfoToday />
-        <Details />
         <Header />
         <ListDays />
       </Wrapper>

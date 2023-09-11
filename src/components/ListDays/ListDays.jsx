@@ -1,6 +1,6 @@
 const ListDays = () => {
   return (
-    <section className="list-day  bg--white border my-3 rounded-md">
+    <section className="list-day  bg--white border  rounded-md">
       <ul className="list-items">
         <li className="item flex items-center justify-between py-4 px-4 normal-title text--black !font-bold border-b">
           <div className="flex gap-3 items-center">
