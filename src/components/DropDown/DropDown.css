@@ -1,0 +1,8 @@
+.drop-down {
+  @apply w-full duration-300 opacity-0 pointer-events-none py-3 px-4 absolute bg-indigo-500 top-full rounded-md z-10 h-[10px] mt-6 overflow-y-scroll;
+}
+
+.drop-down.active {
+  opacity: 1;
+  @apply h-[450px];
+}

@@ -4,13 +4,6 @@ export const getDateDetails = (timestamp) => {
   const month = date.getMonth() + 1;
   const day = date.getDate();
   const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
-
-  console.log(`Year: ${year}`);
-  console.log(`Month: ${month}`);
-  console.log(`Day: ${day}`);
-  console.log(`Time: ${hours}:${minutes}:${seconds}`);
   return {
     year,
     month,

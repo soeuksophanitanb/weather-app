@@ -79,7 +79,3 @@ body {
 .bg--white {
   background-color: var(--white-color);
 }
-
-/* .details {
-  @apply border rounded-lg normal-title text--black py-2 px-4 flex justify-between items-center bg--gray mt-2;
-} */

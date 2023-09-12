@@ -4,7 +4,7 @@ import axios from "axios";
 import useMyStore from "./store/store";
 
 const App = () => {
-  const { api_key, setData, data } = useMyStore();
+  const { api_key, setData } = useMyStore();
   const [currentLocation, setCurrentLocation] = useState(null);
 
   useEffect(() => {

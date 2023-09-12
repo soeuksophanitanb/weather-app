@@ -7,7 +7,7 @@ const InfoToday = () => {
   const currentDay = new Date();
   const { data } = useMyStore();
   const timestamp = data?.dt;
-  const { day, year } = getDateDetails(timestamp);
+  // const { day, year } = getDateDetails(timestamp);
   let icon =
     data && data.weather && data.weather[0] && getWeather(data.weather[0].icon);
   return (

@@ -40,6 +40,22 @@ const useMyStore = create((set) => ({
 
   // big-title
   big_title: "Next 5 days",
+  // data cities
+  filtered_city: null,
+  setFiltered: (city_name) =>
+    set({
+      filtered_city: city_name,
+    }),
+  cities: [
+    {
+      id: 1,
+      name: "Phnom Penh",
+    },
+    {
+      id: 2,
+      name: "Kandal",
+    },
+  ],
 }));
 
 export default useMyStore;
