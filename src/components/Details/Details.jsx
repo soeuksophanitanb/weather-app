@@ -3,7 +3,7 @@ import "./Details.css";
 const Details = () => {
   const { data } = useMyStore();
   return (
-    <div className="details bg--gray  normal-title text--black">
+    <div className="details bg--gray  normal-title text--black py-3 px-4">
       <div className="flex items-center justify-around gap-10 w-full">
         <div className="flex items-center gap-6">
           <p className="text--black font-bold">Precipitation</p>

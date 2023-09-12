@@ -1,7 +1,7 @@
 export const getDateDetails = (timestamp) => {
   const date = new Date(timestamp * 1000);
   const year = date.getFullYear();
-  const month = date.getMonth() + 1; // Month is zero-based, so add 1
+  const month = date.getMonth() + 1;
   const day = date.getDate();
   const hours = date.getHours();
   const minutes = date.getMinutes();
@@ -17,4 +17,8 @@ export const getDateDetails = (timestamp) => {
     day,
     hours,
   };
+};
+
+export const getWeather = (des) => {
+  return `https://openweathermap.org/img/wn/${des}@2x.png`;
 };
