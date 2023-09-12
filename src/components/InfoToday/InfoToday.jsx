@@ -1,8 +1,10 @@
-import { getDateDetails, getWeather } from "../../store/data";
+import { getDateDetails, getWeather, today } from "../../store/data";
 import useMyStore from "../../store/store";
 import Details from "../Details/Details";
+import "./InfoToday.css";
 
 const InfoToday = () => {
+  const currentDay = new Date();
   const { data } = useMyStore();
   const timestamp = data?.dt;
   const { day, year } = getDateDetails(timestamp);
@@ -10,11 +12,13 @@ const InfoToday = () => {
     data && data.weather && data.weather[0] && getWeather(data.weather[0].icon);
   return (
     <section className="info-today">
-      <div className="normal-title rounded-lg text--black py-3 px-4 flex justify-between items-center bg--gray border">
-        <div className="flex items-center gap-3">
+      <div className="info normal-title text--black bg--gray ">
+        <div className="flex items-center gap-6">
           <img className="w-[5rem] h-[5rem]" src={icon} alt="" />
-          <p className="normal-title text--balck !font-bold">
-            Today <span>{day}</span> <span>{year}</span>
+          <p className="normal-title text--balck !font-bold flex gap-4">
+            <span>{today(currentDay.getDay())}</span>
+            <span>{currentDay.getDate()}</span>
+            <span>{currentDay.getFullYear()}</span>
           </p>
         </div>
         <div>
