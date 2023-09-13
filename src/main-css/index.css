@@ -38,7 +38,7 @@ html {
 
 body {
   background-image: url(../../images/bg2.jpg);
-  background-position: bottom;
+  background-position: top;
   background-size: cover;
   min-height: 100vh;
   backdrop-filter: blur(3px);

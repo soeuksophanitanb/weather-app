@@ -36,6 +36,16 @@ const useMyStore = create((set) => ({
     });
   },
 
+  // current location
+  currentLocation: null,
+  setCurrentLocation: (la, lon) =>
+    set(() => ({
+      currentLocation: {
+        latitude: la,
+        longitude: lon,
+      },
+    })),
+
   search: "Phnom Penh",
 
   // big-title
@@ -56,6 +66,9 @@ const useMyStore = create((set) => ({
       name: "Kandal",
     },
   ],
+  setValue: (inputRef) => {
+    inputRef.current.value = "";
+  },
 }));
 
 export default useMyStore;

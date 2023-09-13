@@ -1,8 +1,13 @@
 .drop-down {
-  @apply w-full duration-300 opacity-0 pointer-events-none py-3 px-4 absolute bg-indigo-500 top-full rounded-md z-10 h-[10px] mt-6 overflow-y-scroll;
+  @apply w-full duration-300 opacity-0 pointer-events-none py-3 px-4 absolute backdrop-blur-sm top-full rounded-md z-10 h-[10px] mt-6 overflow-y-scroll;
+  scrollbar-width: none;
 }
 
 .drop-down.active {
   opacity: 1;
-  @apply h-[450px];
+  @apply h-[450px] pointer-events-auto;
+}
+
+.item {
+  @apply cursor-pointer flex items-center justify-between py-3 px-4  !font-bold border-b;
 }

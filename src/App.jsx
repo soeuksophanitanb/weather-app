@@ -4,13 +4,13 @@ import axios from "axios";
 import useMyStore from "./store/store";
 
 const App = () => {
-  const { api_key, setData } = useMyStore();
-  const [currentLocation, setCurrentLocation] = useState(null);
+  const { api_key, setData, currentLocation, setCurrentLocation } =
+    useMyStore();
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       const { latitude, longitude } = position.coords;
-      setCurrentLocation({ latitude, longitude });
+      setCurrentLocation(latitude, longitude);
     });
   }, []);
 
@@ -27,6 +27,8 @@ const App = () => {
         .catch((err) => console.log(err));
     }
   }, [currentLocation]);
+
+  currentLocation && console.log(currentLocation);
 
   return (
     <main>
