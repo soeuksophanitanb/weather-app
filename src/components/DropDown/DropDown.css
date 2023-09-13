@@ -1,13 +1,24 @@
 .drop-down {
   @apply w-full duration-300 opacity-0 pointer-events-none py-3 px-4 absolute bg-white top-full rounded-md z-10 h-[10px] mt-6 overflow-y-scroll border;
-  scrollbar-color: red;
 }
 
 .drop-down.active {
   opacity: 1;
-  @apply h-[450px] pointer-events-auto;
+  @apply h-[550px] pointer-events-auto;
 }
 
 .item {
-  @apply cursor-pointer flex items-center justify-between py-3 px-4 !font-bold border rounded-md;
+  @apply cursor-pointer flex items-center justify-between py-3 px-4 !font-bold  rounded-md duration-200 hover:bg-slate-200;
+}
+
+.drop-down .item:nth-child(odd) {
+  @apply bg-slate-100;
+}
+
+.drop-down .item {
+  @apply hover:scale-100;
+}
+
+#list-day .item:hover {
+  background-color: unset;
 }

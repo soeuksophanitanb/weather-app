@@ -15,6 +15,10 @@ const DropDown = () => {
       ? city_data.filter((city) =>
           city.name.toLowerCase().trim().includes(filtered_city.trim())
         )
+      : filtered_city?.length >= 3
+      ? city_data.filter((city) =>
+          city.country_name.toLowerCase().trim().includes(filtered_city.trim())
+        )
       : [];
 
   // fn change location
