@@ -12,7 +12,6 @@ const useMyStore = create((set) => ({
       const response = await fetch(url);
       const data = await response.json();
       set({ data });
-      console.log(data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -47,9 +46,14 @@ const useMyStore = create((set) => ({
     })),
 
   search: "Phnom Penh",
+  country_name: null,
+  setCountryName: (name) =>
+    set(() => ({
+      country_name: name,
+    })),
 
   // big-title
-  big_title: "Next 5 days",
+  big_title: "Next 4 days",
   // data cities
   filtered_city: null,
   setFiltered: (city_name) =>
@@ -66,9 +70,11 @@ const useMyStore = create((set) => ({
       name: "Kandal",
     },
   ],
-  setValue: (inputRef) => {
-    inputRef.current.value = "";
-  },
+  data_5_days: [],
+  setFiveDays: (data) =>
+    set(() => ({
+      data_5_days: data,
+    })),
 }));
 
 export default useMyStore;

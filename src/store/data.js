@@ -13,7 +13,7 @@ export const getDateDetails = (timestamp) => {
 };
 
 export const getWeather = (des) => {
-  return `https://openweathermap.org/img/wn/${des}@2x.png`;
+  return `./svgs/openweathermap/${des}.svg`;
 };
 
 export const today = (d) => {

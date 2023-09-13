@@ -6,8 +6,8 @@ const Details = () => {
     <div className="details bg--gray  normal-title text--black py-3 px-4">
       <div className="flex items-center justify-around gap-10 w-full">
         <div className="flex items-center gap-6">
-          <p className="text--black font-bold">Precipitation</p>
-          <p className="text--black">70%</p>
+          <p className="text--black font-bold">Feels Like</p>
+          <p className="text--black">{Math.floor(data?.main?.feels_like)} °</p>
         </div>
         <div className="flex items-center justify-between gap-6">
           <p className="text--black font-bold">Wind</p>
