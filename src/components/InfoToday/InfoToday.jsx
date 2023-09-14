@@ -12,7 +12,7 @@ const InfoToday = () => {
     data && data.weather && data.weather[0] && getWeather(data.weather[0].icon);
   return (
     <section className="info-today">
-      <div className="info normal-title text--black bg--gray">
+      <div className="info normal-title text--black bg--gray max-[450px]:flex-col">
         <div className="flex items-center gap-6">
           <img className="w-[5rem] h-[5rem]" src={icon} alt="" />
           <p className="normal-title text--balck !font-bold flex gap-4">

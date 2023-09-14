@@ -1,3 +1,4 @@
 .list-items li:hover {
   transform: translateY(0.5rem);
+  @apply shadow-sm;
 }

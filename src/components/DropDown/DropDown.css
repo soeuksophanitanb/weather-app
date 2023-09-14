@@ -16,7 +16,7 @@
 }
 
 .drop-down .item {
-  @apply hover:scale-100;
+  @apply hover:translate-y-1;
 }
 
 #list-day .item:hover {

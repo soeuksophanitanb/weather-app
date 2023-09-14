@@ -13,8 +13,8 @@ const ListDays = () => {
   console.log("today is ", today(current_day.getDay()));
 
   return (
-    <section id="list-day" className="list-day  bg--white  rounded-md">
-      <ul className="list-items grid grid-cols-2 gap-6">
+    <section id="list-day" className="list-day bg--white  rounded-md">
+      <ul className="list-items grid grid-cols-2 gap-6 max-[520px]:grid-cols-1">
         {fiveDays?.map((data, index) => (
           <li key={data.dt} className="item border text--black normal-title">
             <div className="flex gap-3 items-center">
@@ -24,7 +24,7 @@ const ListDays = () => {
                 alt={data.weather[0].icon}
               />
               <p className="flex gap-3">
-                <span>{today(current_day.getDay() + index + 1)}</span>
+                <span>{today(getDateDetails(data.dt).today)}</span>
                 <span>{data && getDateDetails(data.dt).day}</span>
               </p>
             </div>

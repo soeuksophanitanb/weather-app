@@ -5,7 +5,7 @@ import useMyStore from "../../store/store";
 import { useRef } from "react";
 
 const SearchBox = () => {
-  const { setFiltered } = useMyStore();
+  const { setFiltered, setCurrentLocation } = useMyStore();
   const inputRef = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,8 +18,16 @@ const SearchBox = () => {
     inputRef.current.value = "";
   };
 
+  const getMyLocation = (e) => {
+    e.preventDefault();
+    navigator.geolocation.getCurrentPosition((position) => {
+      const { latitude, longitude } = position.coords;
+      setCurrentLocation(latitude, longitude);
+    });
+  };
+
   return (
-    <form className="form relative" onSubmit={onSubmit}>
+    <form className="form relative max-[460px]:grid-cols-1">
       <input
         ref={inputRef}
         onChange={handleSubmit}
@@ -27,7 +35,7 @@ const SearchBox = () => {
         type="text"
         placeholder="search city...."
       />
-      <Button title="Seach" onClick={() => {}} />
+      <Button title="My Location" onClick={getMyLocation} />
       <DropDown />
     </form>
   );

@@ -4,11 +4,13 @@ export const getDateDetails = (timestamp) => {
   const month = date.getMonth() + 1;
   const day = date.getDate();
   const hours = date.getHours();
+  const today = date.getDay();
   return {
     year,
     month,
     day,
     hours,
+    today,
   };
 };
 
@@ -25,9 +27,6 @@ export const today = (d) => {
   if (d == 4) today = "Thursday";
   if (d == 5) today = "Friday";
   if (d == 6) today = "Saturday";
-  if (d === 7 || d > 7) {
-    return "Sunday";
-  }
 
   return today;
 };
