@@ -16,10 +16,12 @@ const App = () => {
   } = useMyStore();
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const { latitude, longitude } = position.coords;
-      setCurrentLocation(latitude, longitude);
-    });
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const { latitude, longitude } = position.coords;
+        setCurrentLocation(latitude, longitude);
+      });
+    }
   }, []);
 
   useEffect(() => {
